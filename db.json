@@ -1,0 +1,216 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Classic White Tee",
+      "price": 499,
+      "gender": "Unisex",
+      "color": "White",
+      "image": "https://i.pinimg.com/736x/45/a1/72/45a17205a17aa5ca79a17ff9b9b3230a.jpg",
+      "description": "A timeless white tee made from premium cotton, perfect for everyday comfort and style.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 30
+    },
+    {
+      "id": "2",
+      "name": "Vintage Black Tee",
+      "price": 599,
+      "gender": "Men",
+      "color": "Black",
+      "image": "https://i.pinimg.com/736x/81/c4/68/81c468f3730c63f9bc104cf3dcea6968.jpg",
+      "description": "This vintage-style black tee features a soft-wash finish for a worn-in, classic look.",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 25
+    },
+    {
+      "id": "3",
+      "name": "Pastel Pink Tee",
+      "price": 549,
+      "gender": "Women",
+      "color": "Pink",
+      "image": "https://i.pinimg.com/736x/2a/09/35/2a0935638bc15a7b3f8fa4a34c0083f5.jpg",
+      "description": "Light and stylish pastel pink tee tailored for a flattering fit and soft touch.",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 20
+    },
+    {
+      "id": "4",
+      "name": "Olive Green Tee",
+      "price": 579,
+      "gender": "Unisex",
+      "color": "Green",
+      "image": "https://i.pinimg.com/736x/b1/9a/48/b19a486b14abbd853fa3b7443a5b1869.jpg",
+      "description": "Earthy green tee crafted with organic fabric for eco-friendly fashion lovers.",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 35
+    },
+    {
+      "id": "5",
+      "name": "Navy Blue Tee",
+      "price": 499,
+      "gender": "Men",
+      "color": "Blue",
+      "image": "https://i.pinimg.com/736x/b1/b7/da/b1b7da679722b0f9b2c7c3ac7c1d0bda.jpg",
+      "description": "Casual navy blue tee that offers a sleek silhouette and a versatile look.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 28
+    },
+    {
+      "id": "6",
+      "name": "Coral Crop Tee",
+      "price": 529,
+      "gender": "Women",
+      "color": "Coral",
+      "image": "https://i.pinimg.com/736x/b1/51/a5/b151a509457028d90a709f79effe8ca2.jpg",
+      "description": "Trendy coral crop tee with a snug fit, ideal for pairing with high-waist jeans or skirts.",
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "stock": 18
+    },
+    {
+      "id": "7",
+      "name": "Ash Grey Tee",
+      "price": 489,
+      "gender": "Unisex",
+      "color": "Grey",
+      "image": "https://i.pinimg.com/736x/a2/ef/21/a2ef2139ffdd8c0ff0a5ecda2dd5cf2b.jpg",
+      "description": "A versatile grey tee designed for a modern look and all-day comfort.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 22
+    },
+    {
+      "id": "8",
+      "name": "Sunset Orange Tee",
+      "price": 559,
+      "gender": "Women",
+      "color": "Orange",
+      "image": "https://i.pinimg.com/736x/f2/49/3e/f2493e90dfb884ac0fe3d753a12e69db.jpg",
+      "description": "Bright and lively orange tee for a fresh and energetic vibe.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 17
+    },
+    {
+      "id": "9",
+      "name": "Sky Blue Tee",
+      "price": 529,
+      "gender": "Men",
+      "color": "Light Blue",
+      "image": "https://i.pinimg.com/736x/a7/3d/e8/a73de82393cfbed023ba18ec318d908f.jpg",
+      "description": "Cool and calm sky blue tee perfect for summer days and relaxed evenings.",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 26
+    },
+    {
+      "id": "10",
+      "name": "Maroon V-neck Tee",
+      "price": 579,
+      "gender": "Women",
+      "color": "Maroon",
+      "image": "https://i.pinimg.com/736x/4b/d5/3c/4bd53cf9a55308a901fc2f9e31389e47.jpg",
+      "description": "Elegant maroon v-neck tee for a casual yet polished look.",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 20
+    },
+    {
+      "id": "11",
+      "name": "Charcoal Black Tee",
+      "price": 609,
+      "gender": "Men",
+      "color": "Charcoal",
+      "image": "https://i.pinimg.com/736x/73/47/44/7347442d56532fac6234c22924199cf1.jpg",
+      "description": "A premium charcoal tee with a modern cut and strong urban appeal.",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 30
+    },
+    {
+      "id": "12",
+      "name": "Lavender Scoop Tee",
+      "price": 539,
+      "gender": "Women",
+      "color": "Lavender",
+      "image": "https://i.pinimg.com/736x/de/e1/71/dee17182e5dfc68a6ebd25aef54f016a.jpg",
+      "description": "Soft lavender scoop neck tee designed for effortless layering or standalone wear.",
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "stock": 16
+    }
+  ],
+  "users": [
+    {
+      "id": "51db",
+      "name": "adi",
+      "email": "1@gmail",
+      "password": "123",
+      "password2": "123",
+      "cart": []
+    },
+    {
+      "id": "8974",
+      "name": "suhail",
+      "email": "123@dd.com",
+      "password": "123",
+      "password2": "123",
+      "cart": 1
+    },
+    {
+      "id": "7e70",
+      "name": "jasil",
+      "email": "suhailpalakkal1@gmail.com",
+      "password": "1234",
+      "password2": "1234",
+      "cart": []
+    }
+  ]
+}
