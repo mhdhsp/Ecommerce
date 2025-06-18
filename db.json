@@ -202,7 +202,9 @@
       "email": "123@dd.com",
       "password": "123",
       "password2": "123",
-      "cart": 1
+      "cart": [
+        "3"
+      ]
     },
     {
       "id": "7e70",

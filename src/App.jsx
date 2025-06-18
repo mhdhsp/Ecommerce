@@ -8,12 +8,21 @@ import Cart from "./pages/Cart"
 import Signup from "./pages/Signup"
 import ProductDetails from "./pages/ProductDetails"
 import CartLginAlert from "./components/CartLginAlert"
+import UserContext from "./components/Context"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 function App() {
 
+  const [user,setUser]=useState({});
+  useEffect(()=>{
+    const userName=localStorage.getItem("userName");
+   setUser(userName);
+  },[])
+
   return (
   <>
-    
+    <UserContext.Provider value={{user,setUser}}>
       <Router>
         <Navbar/>
         <Routes>
@@ -27,7 +36,7 @@ function App() {
             <Route path="/cartloginalert" element={<CartLginAlert/>}/>
          </Routes>
       </Router>
-    
+      </UserContext.Provider>
   </>
   )
 }
