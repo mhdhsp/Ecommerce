@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from '../components/CartItem';
 import UserContext from '../components/Context';
@@ -7,7 +7,6 @@ import UserContext from '../components/Context';
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
   const user = localStorage.getItem("userName");
-  const cUser=useContext(UserContext);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,7 +24,7 @@ function Cart() {
     };
 
     fetchData();
-  }, [user,cUser]);
+  }, [user]);
 
   return (
     <div className="container mt-5">

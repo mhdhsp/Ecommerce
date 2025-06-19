@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
   const [input, setInput] = useState({
@@ -8,7 +9,7 @@ function Signup() {
     password: "",
     password2: ""
   });
-
+const navigate=useNavigate();
   const [hide, setHide] = useState(true);
 
   const handleChange = (e) => {
@@ -22,13 +23,15 @@ function Signup() {
       name: input.name,
       email: input.email,
       password: input.password,
-      password2: input.password2
+      password2: input.password2,
+      cart:[]
     };
 
     if (data.password === data.password2) {
       setHide(true);
       axios.post(`http://localhost:3031/users`, data)
         .catch(() => console.log("Failed to add user"));
+      navigate("/login");
     } else {
       setHide(false);
     }

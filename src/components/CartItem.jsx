@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
-import UserContext from "./Context";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Checkout from "./Checkout";
+import ItemidContext from "./Context";
+
 
 function CartItem({ item }) {
-  const { user } = useContext(UserContext);
+  const { user } = useContext(ItemidContext);
   const [cart, setCart] = useState([]);
-  const [hide,setHide]=useState(true);
   const navigate=useNavigate();
+
 
   console.log(user);
 
@@ -18,7 +18,7 @@ function CartItem({ item }) {
       setCart(res.data.cart);
     };
     fetchData();
-  }, [user, cart]);
+  }, []);
 
   const removeFromCart = async () => {
     let cartItems = cart.filter((value) => value !== item.id);
@@ -27,12 +27,12 @@ function CartItem({ item }) {
     setCart(cartItems);
     axios.patch(`http://localhost:3031/users/${user}`, { cart: cartItems });
 
-    // setRefresh(!refresh);
     navigate(0);
   };
 
   const buyNow=async ()=>{
-    setHide(false);
+    navigate("checkout",{state:{item}});
+
   }
 
   return (
@@ -57,9 +57,6 @@ function CartItem({ item }) {
           <button className="btn btn-success btn-sm" onClick={buyNow}>Buy Now</button>
         </div>
       </div>
-      {
-        hide ? "":<Checkout/>
-      }
     </div>
   );
 }
