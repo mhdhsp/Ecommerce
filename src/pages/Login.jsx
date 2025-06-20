@@ -22,7 +22,6 @@ function Login() {
       
     );
 
-    console.log(matchItem);
 
     if (matchItem === undefined) setHide(false);
     else {

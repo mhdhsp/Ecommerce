@@ -185,52 +185,210 @@
         "M"
       ],
       "stock": 16
+    },
+    {
+      "id": "13",
+      "name": "Mint Green Tee",
+      "price": 519,
+      "gender": "Unisex",
+      "color": "Mint",
+      "image": "https://i.pinimg.com/736x/7f/6d/f5/7f6df5600bd5ec4c0d91d94b4e949460.jpg",
+      "description": "Refreshing mint green tee that adds a calm vibe to your everyday outfit.",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 21
+    },
+    {
+      "id": "14",
+      "name": "Burgundy Crew Tee",
+      "price": 569,
+      "gender": "Men",
+      "color": "Burgundy",
+      "image": "https://i.pinimg.com/736x/1d/90/8a/1d908a713be4ef6170afbf3d2d25530b.jpg",
+      "description": "Rich burgundy tee with a classic crew neck, ideal for layering or standalone wear.",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 27
+    },
+    {
+      "id": "15",
+      "name": "Peach Slim Tee",
+      "price": 489,
+      "gender": "Women",
+      "color": "Peach",
+      "image": "https://i.pinimg.com/736x/59/8b/e4/598be4eb9a4e2b5b5c38eb2ce67fa187.jpg",
+      "description": "Slim-fit peach tee crafted for comfort and style with a soft texture.",
+      "sizes": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "stock": 19
+    },
+    {
+      "id": "16",
+      "name": "Rust Orange Tee",
+      "price": 559,
+      "gender": "Unisex",
+      "color": "Rust",
+      "image": "https://i.pinimg.com/736x/61/9e/5c/619e5c9abdddd6947e51307bbc19e99c.jpg",
+      "description": "Bold rust-orange tee made from breathable fabric for all-day wear.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 30
+    },
+    {
+      "id": "17",
+      "name": "Ice Blue Tee",
+      "price": 509,
+      "gender": "Men",
+      "color": "Ice Blue",
+      "image": "https://i.pinimg.com/736x/a7/3d/e8/a73de82393cfbed023ba18ec318d908f.jpg",
+      "description": "Chill with style in this ice blue tee — a staple for summer fashion.",
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 24
+    },
+    {
+      "id": "18",
+      "name": "Lemon Yellow Tee",
+      "price": 499,
+      "gender": "Women",
+      "color": "Yellow",
+      "image": "https://i.pinimg.com/736x/92/cd/70/92cd70b4bc18eab8620adae958eea233.jpg",
+      "description": "Bright lemon yellow tee that adds a sunny spark to any outfit.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 15
+    },
+    {
+      "id": "19",
+      "name": "Slate Grey Tee",
+      "price": 579,
+      "gender": "Unisex",
+      "color": "Slate",
+      "image": "https://i.pinimg.com/736x/c1/f4/ca/c1f4ca7b5a10a8b1eba651880d503744.jpg",
+      "description": "Modern slate grey tee with minimal design, perfect for everyday wear.",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "stock": 29
+    },
+    {
+      "id": "20",
+      "name": "Teal Crew Neck Tee",
+      "price": 549,
+      "gender": "Men",
+      "color": "Teal",
+      "image": "https://i.pinimg.com/736x/c5/f3/c5/c5f3c5c21363d3e48959073d5f101158.jpg",
+      "description": "Vibrant teal tee with a snug fit and moisture-wicking fabric.",
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "stock": 23
+    },
+    {
+      "id": "21",
+      "name": "Beige Casual Tee",
+      "price": 489,
+      "gender": "Women",
+      "color": "Beige",
+      "image": "https://i.pinimg.com/736x/82/aa/b1/82aab1084d39767bbc41ef30923e92b3.jpg",
+      "description": "Neutral beige tee styled for minimalists — soft, smart, and breathable.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 18
+    },
+    {
+      "id": "22",
+      "name": "Neon Lime Tee",
+      "price": 599,
+      "gender": "Unisex",
+      "color": "Neon Green",
+      "image": "https://i.pinimg.com/736x/d3/83/a7/d383a75682ae3d227d5f7b0749fe2b31.jpg",
+      "description": "Stand out in this neon lime tee — ideal for parties, workouts, or streetwear.",
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "stock": 20
     }
   ],
   "users": [
     {
-      "id": "51db",
-      "name": "adi",
-      "email": "1@gmail",
-      "password": "123",
-      "password2": "123",
-      "cart": []
-    },
-    {
-      "id": "8974",
+      "id": "b2f4",
       "name": "suhail",
-      "email": "123@dd.com",
-      "password": "123",
-      "password2": "123",
-      "cart": [],
-      "orders": [
-        "1",
-        "3",
-        "2",
-        "3",
-        "12",
-        "3"
-      ]
-    },
-    {
-      "id": "7e70",
-      "name": "jasil",
-      "email": "suhailpalakkal1@gmail.com",
-      "password": "1234",
-      "password2": "1234",
-      "cart": [],
-      "orders": []
-    },
-    {
-      "id": "41a7",
-      "name": "junaid",
       "email": "suhailpalakkal1@gmail.com",
       "password": "123",
       "password2": "123",
       "cart": [
         "3"
       ],
-      "orders": []
+      "orders": [
+        {
+          "paymentMethod": "Cash on delivery",
+          "size": "M",
+          "home": "markaz",
+          "place": "perinthalmanna",
+          "pin": "679322",
+          "contact": "8157025186",
+          "quantity": 3,
+          "pName": "Pastel Pink Tee",
+          "orderTime": "2025-06-20T05:45:52.286Z",
+          "orderId": 6212
+        }
+      ]
+    },
+    {
+      "id": "7851",
+      "name": "navas",
+      "email": "suhailsuku121@gmail.com",
+      "password": "1234",
+      "password2": "1234",
+      "cart": [],
+      "orders": [
+        {
+          "paymentMethod": "Cash on delivery",
+          "size": "S",
+          "home": "pulikkla",
+          "place": "thootha",
+          "pin": "452627",
+          "contact": "71883939",
+          "quantity": 10,
+          "pName": "Pastel Pink Tee",
+          "orderTime": "2025-06-20T05:49:41.755Z",
+          "orderId": 1270
+        }
+      ]
     }
   ]
 }

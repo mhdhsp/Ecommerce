@@ -24,7 +24,8 @@ const navigate=useNavigate();
       email: input.email,
       password: input.password,
       password2: input.password2,
-      cart:[]
+      cart:[],
+      orders:[]
     };
 
     if (data.password === data.password2) {

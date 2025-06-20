@@ -46,7 +46,6 @@ function ProductDetails() {
     }
   };
 
-  console.log(product.sizes);
 
   return (
     <div className="container mt-5">
@@ -64,7 +63,6 @@ function ProductDetails() {
             <h2 className="mb-3">{product.name}</h2>
             <p className="text-muted">{product.description}</p>
             <h4 className="text-primary mb-3">₹{product.price}</h4>
-
             <div className="d-flex gap-3 mt-4">
               <div className="d-flex flex-column align-items-center gap-3 p-3">
                 <button

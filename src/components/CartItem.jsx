@@ -10,7 +10,6 @@ function CartItem({ item }) {
   const navigate=useNavigate();
 
 
-  console.log(user);
 
   useEffect(() => {
     const fetchData = async () => {

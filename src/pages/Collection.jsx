@@ -29,7 +29,6 @@ function Collection() {
       let activeFilter = Object.keys(filters).filter(
         (element) => filters[element]
       );
-      console.log(activeFilter);
       
       res=res.filter(element=>activeFilter.includes(element.gender.toLowerCase()));
       setItems(res);
@@ -39,16 +38,38 @@ function Collection() {
       
     };
     filterData();
-  },[filters]);
+  },[allitems,filters]);
 
   const handleChange = async (e) => {
     const { id, checked } = e.target;
     setFilters({ ...filters, [id]: checked });
   };
 
+  const handleClick=e=>{
+    let action =e.target.value;
+    switch(action)
+    {
+      case "toLow":
+        {
+          let arr=[...items];
+          arr=arr.sort((a,b)=>b.price-a.price);
+          setItems(arr);
+          break;
+        }
+        case "toHigh":
+        {
+          let arr=[...items];;
+          arr=arr.sort((a,b)=>a.price-b.price);
+          setItems(arr);
+          break;
+        }
+        
+    }
+    
+  }
   return (
     <div>
-      <Filter handleChange={handleChange} />
+      <Filter handleChange={handleChange} handleClick={handleClick} />
       <div className="container py-4">
         <div className="row g-4">
           {items.map((item) => (
