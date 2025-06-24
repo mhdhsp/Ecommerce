@@ -14,21 +14,34 @@ function Login() {
       pass: input.password,
     };
 
-    let products = await axios.get(`http://localhost:3031/users`);
-    products = products.data;
+    let userList = await axios.get(`http://localhost:3031/users`);
+    userList = userList.data;
 
-    const matchItem = products.find(
+    let adminList=await axios.get(`http://localhost:3031/admins`);
+    adminList=adminList.data;
+
+    const matchAdmin=adminList.find(
+      item=> data.name===item.name && data.pass===item.pass
+    )
+    const matchItem = userList.find(
       (item) => data.name === item.name && data.pass === item.password
       
     );
 
 
+  if(matchAdmin)
+  {
+    navigate("/admin");
+    localStorage.setItem("adminName",matchAdmin.name);
+  }
+  else{
     if (matchItem === undefined) setHide(false);
     else {
       setHide(true);
       localStorage.setItem("userName", matchItem.id);
       navigate("/");
     }
+  }
   };
 
   const handleChange = (e) => {

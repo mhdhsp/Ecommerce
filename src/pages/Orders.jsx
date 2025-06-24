@@ -5,7 +5,8 @@ import axios from 'axios';
 function Orders() {
   const user = localStorage.getItem("userName");
   const [items, setItems] = useState([]);
-
+  // const user=localStorage.getIto
+  // oem("userName");
   useEffect(() => {
     const fetchData = async () => {
       let res = await axios.get(`http://localhost:3031/users/${user}`);
@@ -19,7 +20,8 @@ function Orders() {
   return (
     <div className="container mt-4">
       {
-        items.length===0? <h1  className="alert alert-warning text-center" role="alert">No orders yet</h1> :
+        // !user ? <
+        items.length===0? <div  className="alert alert-warning text-center" role="alert">No orders yet</div> :
         items.map(item => (
         <div className="card mb-4 w-100 shadow-sm border-primary" key={item.orderid}>
           <div className="card-body text-dark">

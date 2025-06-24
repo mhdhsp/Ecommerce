@@ -345,50 +345,56 @@
   ],
   "users": [
     {
-      "id": "b2f4",
+      "id": "21c0",
       "name": "suhail",
       "email": "suhailpalakkal1@gmail.com",
       "password": "123",
       "password2": "123",
       "cart": [
+        "2",
         "3"
       ],
       "orders": [
-        {
-          "paymentMethod": "Cash on delivery",
-          "size": "M",
-          "home": "markaz",
-          "place": "perinthalmanna",
-          "pin": "679322",
-          "contact": "8157025186",
-          "quantity": 3,
-          "pName": "Pastel Pink Tee",
-          "orderTime": "2025-06-20T05:45:52.286Z",
-          "orderId": 6212
-        }
+        
       ]
     },
     {
-      "id": "7851",
-      "name": "navas",
-      "email": "suhailsuku121@gmail.com",
+      "id": "8c16",
+      "name": "jasil",
+      "email": "suhailpalakkal1@gmail.com",
       "password": "1234",
       "password2": "1234",
       "cart": [],
       "orders": [
         {
           "paymentMethod": "Cash on delivery",
-          "size": "S",
-          "home": "pulikkla",
-          "place": "thootha",
-          "pin": "452627",
-          "contact": "71883939",
-          "quantity": 10,
-          "pName": "Pastel Pink Tee",
-          "orderTime": "2025-06-20T05:49:41.755Z",
-          "orderId": 1270
+          "size": "M",
+          "home": "palakkal",
+          "place": "kuppooth",
+          "pin": "67899",
+          "contact": "8157025186",
+          "quantity": 2,
+          "pName": "Classic White Tee",
+          "orderTime": "2025-06-20T10:45:06.589Z",
+          "orderId": 2979
         }
       ]
+    },
+    {
+      "id": "a328",
+      "name": "shabana",
+      "email": "dkrfx786@gmail.com",
+      "password": "12345",
+      "password2": "12345",
+      "cart": [],
+      "orders": []
+    }
+  ],
+  "admins": [
+    {
+      "name": "muhammed",
+      "pass": "admin",
+      "id": "1a36"
     }
   ]
 }

@@ -33,6 +33,8 @@ function Checkout() {
       orderTime: new Date(),
       orderId: Math.floor(Math.random() * 10000) + 1,
     };
+    console.log("from checkout",user);
+    
     let res = await axios.get(`http://localhost:3031/users/${user}`);
     let orders = res.data.orders;
     orders = [...orders, data];
@@ -46,7 +48,7 @@ function Checkout() {
     await axios.patch(`http://localhost:3031/users/${user}`, { cart });
 
     setTimeout(() => {
-      navigate("cart");
+      navigate("/cart");
     }, 2000);
   };
 
