@@ -357,10 +357,23 @@
       "password": "123",
       "password2": "123",
       "block": false,
-      "cart": [
-        "3"
-      ],
-      "orders": []
+      "cart": [],
+      "orders": [
+        
+        {
+          "paymentMethod": "Cash on delivery",
+          "size": "M",
+          "home": "palakkal",
+          "place": "kuppooth",
+          "pin": "679322",
+          "contact": "8157025186",
+          "quantity": 3,
+          "pName": "Navy Blue Tee",
+          "orderTime": "2025-06-25T05:27:31.135Z",
+          "orderId": 7592,
+          "price": 1497
+        }
+      ]
     },
     {
       "id": "9f97",

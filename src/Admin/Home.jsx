@@ -29,12 +29,12 @@ function Home() {
         <ul className="nav flex-column gap-2">
           <li className="nav-item">
             <NavLink
-              to="analysis"
+              to="dashboard"
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active bg-secondary" : "text-white"}`
               }
             >
-              Analysis
+              Dashboard
             </NavLink>
           </li>
           <li className="nav-item">

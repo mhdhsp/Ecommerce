@@ -19,10 +19,10 @@ import Orders from "../pages/Orders";
 import Home from "../Admin/Home";
 import Products from "../Admin/Products";
 import Users from "../Admin/Users";
-import Analysis from "../Admin/Analysis";
 import NewProduct from "../Admin/NewProduct";
 import EditItem from "../Admin/EditItem";
 import AdminManage from "../Admin/AdminManage";
+import Dashboard from "../Admin/Dashboard";
 
 function AppRoutes({ user, setUser, itemId, setItemId }) {
 
@@ -38,8 +38,8 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
       {!hideNavBar && <Navbar />}
       <Routes>
         <Route path="/admin" element={<Home />}>
-            <Route index element={<Analysis/>} />
-          <Route path="analysis" element={<Analysis />} />
+            <Route index element={<Dashboard/>} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<Products />} />
           <Route path="users" element={<Users />} />
           <Route path="adminmanage" element={<AdminManage />} />

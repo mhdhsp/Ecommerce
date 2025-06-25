@@ -32,6 +32,7 @@ function Checkout() {
       pName: item.name,
       orderTime: new Date(),
       orderId: Math.floor(Math.random() * 10000) + 1,
+      price:orderDetails.quantity*item.price
     };
     console.log("from checkout",user);
     
