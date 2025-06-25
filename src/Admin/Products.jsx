@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import ItemCard from "./AdminComponents/ItemCard";
+import Modal from "./AdminComponents/Modal";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [susProducts,setSusProducts]=useState([]);
+  const [showModal,setShowModal]=useState(false);
 
   const navigate=useNavigate();
   useEffect(() => {
@@ -23,10 +25,14 @@ function Products() {
   }
 
   const removeAll=async()=>{
-      let res=await axios.get(`http://localhost:3031/items`);
+     setShowModal(true);
+  }
+
+  const handleConfirm= async()=>{
+    setShowModal(false);
+     let res=await axios.get(`http://localhost:3031/items`);
       res=res.data;
       res.map(item=>axios.delete(`http://localhost:3031/items/${item.id}`));
-      alert("all deleted");
   }
 
   return (
@@ -36,6 +42,10 @@ function Products() {
         <div>
           <button className="btn btn-primary me-2" onClick={addNewProduct}>Add New Product</button>
           <button className="btn btn-primary" onClick={removeAll}>Remove all products</button>
+          <Modal show={showModal}
+                  onConfirm={handleConfirm}
+                  onCancel={()=>setShowModal(false)}
+                  message="Are you sure to remove all products ?"/>
         </div>
       </div>
 

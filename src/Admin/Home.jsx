@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
+import Modal from "./AdminComponents/Modal";
 
 function Home() {
   const navigate = useNavigate();
+  const [showModal,setShowModal]=useState(false);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -14,10 +16,16 @@ function Home() {
   }, [navigate]);
 
   const handleLogout = () => {
+    setShowModal(true);
+    
+    
+  };
+  const confirmLogout=()=>{
+    setShowModal(false);
     localStorage.clear();
     navigate("/login", { replace: true });
     navigate(0);
-  };
+  }
 
   return (
     <div className="container-fluid">
@@ -75,6 +83,11 @@ function Home() {
               Logout
             </button>
           </li>
+          <Modal show={showModal}
+              onConfirm={confirmLogout}
+              onCancel={()=>setShowModal(false)}
+               message="Are you sure you want to proceed?" 
+               />
         </ul>
       </div>
 
@@ -84,7 +97,8 @@ function Home() {
           marginLeft: "220px",
           minHeight: "100vh",
           padding: "1rem",
-          paddingLeft: "15rem",
+          paddingLeft: "15rem"
+         
         }}
       >
         <Outlet />

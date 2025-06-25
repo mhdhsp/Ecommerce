@@ -25,3 +25,19 @@
   transform: scale(1.03);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
+
+
+.btn-group .btn {
+  /* border: none ; */
+  outline: none !important;
+  border-radius: 0;
+}
+.active-btn {
+  border-bottom: 4px solid #0d6efd; 
+  color: #0d6efd;
+  font-weight: 600;
+  background-color: transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+

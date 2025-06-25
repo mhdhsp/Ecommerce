@@ -5,67 +5,59 @@ import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
 
 function Collection() {
+  const [allItems, setAllItems] = useState([]);
   const [items, setItems] = useState([]);
-  const [allitems, setAllitems] = useState([]);
-  const [filters, setFilters] = useState({
-    men: false,
-    women: false,
-    unisex: false,
-  });
+
   useEffect(() => {
     axios.get(`http://localhost:3031/items`).then((res) => {
-      
-      setAllitems(res.data.filter(item=>item.suspend !==true));
+      const activeItems = res.data.filter(item => item.suspend !== true);
+      setAllItems(activeItems);
+      setItems(activeItems);
     });
-  }, [filters]);
+  }, []);
 
-  useEffect(() => {
-    setItems(allitems);
-  }, [allitems]);
-
-  useEffect(() => {
-    const filterData = async () => {
-      let activeFilter = Object.keys(filters).filter(
-        (element) => filters[element]
-      );
-       console.log("🔎 Active Filter:", activeFilter);
-    console.log("📦 All Items:", allitems);
-
-      let res = allitems.filter((element) =>
-        activeFilter.includes(element.gender.toLowerCase())
-      );
-       console.log("✅ Filtered Items:", res)
-      setItems(res);
-      if (activeFilter.length === 0) setItems(allitems);
-    };
-    filterData();
-  }, [allitems, filters]);
-
-  const handleChange = async (e) => {
-    const { id, checked } = e.target;
-    setFilters({ ...filters, [id]: checked });
-  };
+  const handleButtonClick=(e)=>{
+    if(e.target.value==="All items")
+      setItems(allItems);
+    else
+    {
+      let filtered=allItems.filter(item=>item.gender.toLowerCase()===e.target.value.toLowerCase());
+       setItems(filtered);
+    }
+    
+  }
 
   const handleClick = (e) => {
-    let action = e.target.value;
+    const action = e.target.value;
+    let sortedItems = [...items];
+
     switch (action) {
-      case "toLow": {
-        let arr = [...items];
-        arr = arr.sort((a, b) => b.price - a.price);
-        setItems(arr);
+      case "highToLow":
+        sortedItems.sort((a, b) => b.price - a.price);
         break;
-      }
-      case "toHigh": {
-        let arr = [...items];
-        arr = arr.sort((a, b) => a.price - b.price);
-        setItems(arr);
+      case "lowToHigh":
+        sortedItems.sort((a, b) => a.price - b.price);
         break;
-      }
+      case "reset":
+        sortedItems = [...allItems];
+        break;
+      default:
+        return;
     }
+
+    setItems(sortedItems);
   };
+
+  const handleSearchChange=(e)=>{
+    console.log(e.target.value);
+    let match=allItems.filter(item=>item.name.toLowerCase().startsWith(e.target.value.toLowerCase()));
+    setItems(match);
+    
+  }
+
   return (
     <div>
-      <Filter handleChange={handleChange} handleClick={handleClick} />
+      <Filter handleClick={handleClick} handleButtonClick={handleButtonClick} handleSearchChange={handleSearchChange} />
       <div className="container py-4">
         <div className="row g-4">
           {items.map((item) => (
