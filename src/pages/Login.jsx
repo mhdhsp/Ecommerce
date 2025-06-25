@@ -15,7 +15,7 @@ function Login() {
     };
 
     let userList = await axios.get(`http://localhost:3031/users`);
-    userList = userList.data;
+    userList = userList.data.filter(item=>item.block!==true);
 
     let adminList=await axios.get(`http://localhost:3031/admins`);
     adminList=adminList.data;

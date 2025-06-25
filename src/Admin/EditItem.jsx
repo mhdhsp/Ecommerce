@@ -1,22 +1,17 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-function NewProduct() {
+function EditItem() {
+    const location=useLocation();
+    const {item}=location.state;
+    console.log(item);
+    
   const options = ["s", "M", "L", "XL"];
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState(item.sizes||[]);
   const navigate=useNavigate();
-  const init={
-    name: "",
-      price:"",
-      gender: "",
-      color: "",
-      image: "",
-      description: "",
-      sizes: "",
-      stock: ""
-  }
-  const [newProduct,setNewProduct]=useState(init);
+  
+  const [product,setProduct]=useState(item)
 
 
   const handleCheckboxChange = (e) => {
@@ -29,25 +24,19 @@ function NewProduct() {
 
     console.log(selectedOptions);
   };
-  const handleRadioChange=(e)=>{
-      
-  setNewProduct({ ...newProduct, gender: e.target.value }); 
-};
-
-  
 
   const handleChange=e=>{
-    setNewProduct({...newProduct,[e.target.name]:e.target.value})
+    setProduct({...product,[e.target.name]:e.target.value})
   }
 
   const handleSubmit=async (e)=>{
     e.preventDefault();
-    const data={...newProduct,sizes:selectedOptions};
+    const data={...product,sizes:selectedOptions};
     console.log(data);
-    setNewProduct(init)
+    setProduct({})
     try
     {
-      await axios.post(`http://localhost:3031/items`,data);
+      await axios.patch(`http://localhost:3031/items/${item.id}`,data);
     }
     catch(e)
       {
@@ -68,7 +57,7 @@ function NewProduct() {
       name="name"
       placeholder="Enter the name of product"
       onChange={handleChange}
-      value={newProduct.name}
+      value={product.name}
       required
     />
   </div>
@@ -80,34 +69,22 @@ function NewProduct() {
       name="price"
       placeholder="Enter the price of product"
       onChange={handleChange}
-      value={newProduct.price}
+      value={product.price}
       required
       min="1"
     />
   </div>
 
   <div className="mb-3">
-    {<div className="mb-3">
-  {
-  ["Men", "Women", "Unisex"].map((ele, index) => (
-    <div key={index} className="form-check form-check-inline">
-      <input
-        className="form-check-input"
-        type="radio"
-        name="gender"
-        value={ele}
-        onChange={handleRadioChange}
-        checked={newProduct.gender === ele}
-        id={`radio-${ele}`}
-      />
-      <label className="form-check-label" htmlFor={`radio-${ele}`}>
-        {ele}
-      </label>
-    </div>
-  ))}
-</div>
-
-    }
+    <input
+      className="form-control"
+      type="text"
+      name="gender"
+      placeholder="Enter the gender"
+      onChange={handleChange}
+      value={product.gender}
+      required
+    />
   </div>
 
   <div className="mb-3">
@@ -117,7 +94,7 @@ function NewProduct() {
       name="color"
       placeholder="Enter the color name of the product"
       onChange={handleChange}
-      value={newProduct.color}
+      value={product.color}
       required
     />
   </div>
@@ -129,7 +106,7 @@ function NewProduct() {
       name="image"
       placeholder="Enter the URL of the product image"
       onChange={handleChange}
-      value={newProduct.image}
+      value={product.image}
       required
     />
   </div>
@@ -141,7 +118,7 @@ function NewProduct() {
       name="description"
       placeholder="Enter a description about the product"
       onChange={handleChange}
-      value={newProduct.description}
+      value={product.description}
       required
     />
   </div>
@@ -177,14 +154,14 @@ function NewProduct() {
       name="stock"
       placeholder="Enter the available stock of the product"
       onChange={handleChange}
-      value={newProduct.stock}
+      value={product.stock}
       required
       min="1"
     />
   </div>
 
   <button type="submit" className="btn btn-primary">
-    Add the product
+    Update the product
   </button>
 </form>
 
@@ -192,4 +169,4 @@ function NewProduct() {
   );
 }
 
-export default NewProduct;
+export default EditItem;

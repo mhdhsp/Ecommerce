@@ -21,6 +21,8 @@ import Products from "../Admin/Products";
 import Users from "../Admin/Users";
 import Analysis from "../Admin/Analysis";
 import NewProduct from "../Admin/NewProduct";
+import EditItem from "../Admin/EditItem";
+import AdminManage from "../Admin/AdminManage";
 
 function AppRoutes({ user, setUser, itemId, setItemId }) {
 
@@ -40,7 +42,9 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
           <Route path="analysis" element={<Analysis />} />
           <Route path="products" element={<Products />} />
           <Route path="users" element={<Users />} />
-          <Route path="newproduct" element={<NewProduct/>}/>
+          <Route path="adminmanage" element={<AdminManage />} />
+          <Route path="/admin/products/newproduct" element={<NewProduct/>}/>
+          <Route path="/admin/products/editproduct" element={<EditItem/>}/>
         </Route>
 
         <Route path="/" element={<Collection />} />

@@ -2,9 +2,9 @@
   "items": [
     {
       "id": "1",
-      "name": "Classic White Tee",
-      "price": 499,
-      "gender": "Unisex",
+      "name": "Classic ",
+      "price": "3200",
+      "gender": "Men",
       "color": "White",
       "image": "https://i.pinimg.com/736x/45/a1/72/45a17205a17aa5ca79a17ff9b9b3230a.jpg",
       "description": "A timeless white tee made from premium cotton, perfect for everyday comfort and style.",
@@ -14,7 +14,8 @@
         "L",
         "XL"
       ],
-      "stock": 30
+      "stock": 30,
+      "suspend": true
     },
     {
       "id": "2",
@@ -29,7 +30,8 @@
         "L",
         "XL"
       ],
-      "stock": 25
+      "stock": 25,
+      "suspend": true
     },
     {
       "id": "3",
@@ -44,7 +46,8 @@
         "M",
         "L"
       ],
-      "stock": 20
+      "stock": 20,
+      "suspend": false
     },
     {
       "id": "4",
@@ -60,7 +63,8 @@
         "XL",
         "XXL"
       ],
-      "stock": 35
+      "stock": 35,
+      "suspend": false
     },
     {
       "id": "5",
@@ -76,7 +80,8 @@
         "L",
         "XL"
       ],
-      "stock": 28
+      "stock": 28,
+      "suspend": false
     },
     {
       "id": "6",
@@ -91,7 +96,8 @@
         "S",
         "M"
       ],
-      "stock": 18
+      "stock": 18,
+      "suspend": false
     },
     {
       "id": "7",
@@ -107,7 +113,8 @@
         "L",
         "XL"
       ],
-      "stock": 22
+      "stock": 22,
+      "suspend": false
     },
     {
       "id": "8",
@@ -123,7 +130,8 @@
         "M",
         "L"
       ],
-      "stock": 17
+      "stock": 17,
+      "suspend": false
     },
     {
       "id": "9",
@@ -138,7 +146,8 @@
         "L",
         "XL"
       ],
-      "stock": 26
+      "stock": 26,
+      "suspend": false
     },
     {
       "id": "10",
@@ -153,7 +162,8 @@
         "M",
         "L"
       ],
-      "stock": 20
+      "stock": 20,
+      "suspend": false
     },
     {
       "id": "11",
@@ -169,7 +179,8 @@
         "XL",
         "XXL"
       ],
-      "stock": 30
+      "stock": 30,
+      "suspend": false
     },
     {
       "id": "12",
@@ -184,7 +195,8 @@
         "S",
         "M"
       ],
-      "stock": 16
+      "stock": 16,
+      "suspend": false
     },
     {
       "id": "13",
@@ -199,7 +211,8 @@
         "M",
         "L"
       ],
-      "stock": 21
+      "stock": 21,
+      "suspend": false
     },
     {
       "id": "14",
@@ -215,7 +228,8 @@
         "XL",
         "XXL"
       ],
-      "stock": 27
+      "stock": 27,
+      "suspend": false
     },
     {
       "id": "15",
@@ -230,7 +244,8 @@
         "S",
         "M"
       ],
-      "stock": 19
+      "stock": 19,
+      "suspend": false
     },
     {
       "id": "16",
@@ -246,7 +261,8 @@
         "L",
         "XL"
       ],
-      "stock": 30
+      "stock": 30,
+      "suspend": true
     },
     {
       "id": "17",
@@ -261,7 +277,8 @@
         "L",
         "XL"
       ],
-      "stock": 24
+      "stock": 24,
+      "suspend": false
     },
     {
       "id": "18",
@@ -277,7 +294,8 @@
         "M",
         "L"
       ],
-      "stock": 15
+      "stock": 15,
+      "suspend": false
     },
     {
       "id": "19",
@@ -293,7 +311,8 @@
         "L",
         "XL"
       ],
-      "stock": 29
+      "stock": 29,
+      "suspend": false
     },
     {
       "id": "20",
@@ -309,7 +328,8 @@
         "XL",
         "XXL"
       ],
-      "stock": 23
+      "stock": 23,
+      "suspend": false
     },
     {
       "id": "21",
@@ -325,67 +345,30 @@
         "M",
         "L"
       ],
-      "stock": 18
-    },
-    {
-      "id": "22",
-      "name": "Neon Lime Tee",
-      "price": 599,
-      "gender": "Unisex",
-      "color": "Neon Green",
-      "image": "https://i.pinimg.com/736x/d3/83/a7/d383a75682ae3d227d5f7b0749fe2b31.jpg",
-      "description": "Stand out in this neon lime tee — ideal for parties, workouts, or streetwear.",
-      "sizes": [
-        "S",
-        "M",
-        "L"
-      ],
-      "stock": 20
+      "stock": 18,
+      "suspend": false
     }
   ],
   "users": [
     {
-      "id": "21c0",
+      "id": "1f45",
       "name": "suhail",
       "email": "suhailpalakkal1@gmail.com",
       "password": "123",
       "password2": "123",
+      "block": false,
       "cart": [
-        "2",
         "3"
       ],
-      "orders": [
-        
-      ]
+      "orders": []
     },
     {
-      "id": "8c16",
+      "id": "9f97",
       "name": "jasil",
-      "email": "suhailpalakkal1@gmail.com",
-      "password": "1234",
-      "password2": "1234",
-      "cart": [],
-      "orders": [
-        {
-          "paymentMethod": "Cash on delivery",
-          "size": "M",
-          "home": "palakkal",
-          "place": "kuppooth",
-          "pin": "67899",
-          "contact": "8157025186",
-          "quantity": 2,
-          "pName": "Classic White Tee",
-          "orderTime": "2025-06-20T10:45:06.589Z",
-          "orderId": 2979
-        }
-      ]
-    },
-    {
-      "id": "a328",
-      "name": "shabana",
-      "email": "dkrfx786@gmail.com",
-      "password": "12345",
-      "password2": "12345",
+      "email": "dakirhpt@gmail.com",
+      "password": "123",
+      "password2": "123",
+      "block": false,
       "cart": [],
       "orders": []
     }
@@ -395,6 +378,11 @@
       "name": "muhammed",
       "pass": "admin",
       "id": "1a36"
+    },
+    {
+      "id": "fea0",
+      "name": "adithyan",
+      "pass": "admin2"
     }
   ]
 }

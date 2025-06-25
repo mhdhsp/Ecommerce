@@ -1,8 +1,10 @@
 import React from 'react';
+import "../components/Card.css"
 
 function ItemCard({ item }) {
   return (
-    <div className="card h-100 shadow-sm">
+    <div  className= "card h-100 shadow-sm hover-card">
+      
       <img
         src={item.image}
         className="card-img-top"

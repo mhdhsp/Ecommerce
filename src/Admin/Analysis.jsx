@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import "../components/Card.css"
 
 function Analysis() {
 
@@ -27,8 +28,8 @@ function Analysis() {
   return (
     <div className="container mt-5">
       <div className="row justify-content-center text-center">
-        <div className="col-md-3 mb-4">
-          <div className="card shadow-sm border-primary">
+        <div className="col-md-3 mb-4 ">
+          <div className="card shadow-sm border-primary hover-card">
             <div className="card-body">
               <h5 className="card-title text-primary">Total Users</h5>
               <p className="card-text display-6">{users.length}</p>
@@ -36,7 +37,7 @@ function Analysis() {
           </div>
         </div>
         <div className="col-md-3 mb-4">
-          <div className="card shadow-sm border-success">
+          <div className="card shadow-sm border-success hover-card">
             <div className="card-body">
               <h5 className="card-title text-success">Total Orders</h5>
               <p className="card-text display-6">{totalOrders}</p>
@@ -44,7 +45,7 @@ function Analysis() {
           </div>
         </div>
         <div className="col-md-3 mb-4">
-          <div className="card shadow-sm border-warning">
+          <div className="card shadow-sm border-warning hover-card">
             <div className="card-body">
               <h5 className="card-title text-warning">Total Products</h5>
               <p className="card-text display-6">{productsCount}</p>

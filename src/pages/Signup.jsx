@@ -24,6 +24,7 @@ const navigate=useNavigate();
       email: input.email,
       password: input.password,
       password2: input.password2,
+      block:false,
       cart:[],
       orders:[]
     };
