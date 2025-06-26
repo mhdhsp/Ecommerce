@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ItemCard from "../components/ItemCard";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Filter from "../components/Filter";
+import { ThemeContext } from "../components/ThemeContext1";
 
 function Collection() {
   const [allItems, setAllItems] = useState([]);
   const [items, setItems] = useState([]);
+  const {themeStyle}=useContext(ThemeContext);
 
   useEffect(() => {
     axios.get(`http://localhost:3031/items`).then((res) => {
@@ -56,7 +58,7 @@ function Collection() {
   }
 
   return (
-    <div>
+    <div style={themeStyle}>
       <Filter handleClick={handleClick} handleButtonClick={handleButtonClick} handleSearchChange={handleSearchChange} />
       <div className="container py-4">
         <div className="row g-4">

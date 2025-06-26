@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { ThemeContext } from "../components/ThemeContext1";
 
 function Login() {
+  const {themeStyle,inputStyle}=useContext(ThemeContext);
   const [input, setInput] = useState({ name: "", password: "" });
   const [hide, setHide] = useState(true);
   const navigate = useNavigate();
@@ -49,7 +51,7 @@ function Login() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" style={themeStyle}>
       <form className="mx-auto p-4 border rounded shadow-sm" onSubmit={handleSubmit} style={{ maxWidth: '400px' }}>
         <h2 className="mb-4 text-center">Login</h2>
 
@@ -62,6 +64,7 @@ function Login() {
             value={input.name}
             onChange={handleChange}
             required
+            style={inputStyle}
           />
         </div>
 
@@ -74,6 +77,7 @@ function Login() {
             value={input.password}
             onChange={handleChange}
             required
+            style={inputStyle}
           />
         </div>
 

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ItemidContext from "./Context";
 import axios from "axios";
+import { ThemeContext } from "./ThemeContext1";
 
 function Checkout() {
   const [hide, setHide] = useState(true);
@@ -18,6 +19,7 @@ function Checkout() {
   const location = useLocation();
   const { item } = location.state || {};
   const { user } = useContext(ItemidContext);
+  const {themeStyle,inputStyle}=useContext(ThemeContext);
 
   const handleChange = (e) => {
     setOrderDetails({ ...orderDetails, [e.target.name]: e.target.value });
@@ -67,7 +69,7 @@ function Checkout() {
 
 
   return (
-    <div className="container my-5">
+    <div className="container-fluid my-5" style={themeStyle}>
       <div className="text-center mb-4">
         <h2 className="fw-bold">Checkout</h2>
         <p className="fs-5 text-primary">{item?.name}</p>
@@ -76,12 +78,14 @@ function Checkout() {
 
       <form
         className="p-4 border rounded shadow-sm bg-light w-100"
-        style={{ maxWidth: "500px", margin: "auto" }}
+        style={{ maxWidth: "500px", margin: "auto",...themeStyle }}
       >
         <select
           className="form-select mb-3"
           name="paymentMethod"
           onChange={handleChange}
+          style={inputStyle}
+
         >
           <option value="" disabled selected>
             Select a payment method
@@ -94,6 +98,7 @@ function Checkout() {
           className="form-select mb-3"
           name="size"
           onChange={handleChange}
+          style={inputStyle}
         >
           <option value="" disabled selected>
             Select the size
@@ -103,7 +108,7 @@ function Checkout() {
           <option value={item.sizes[2]}>{item.sizes[2]}</option>
         </select>
 
-        <div className="d-flex align-items-center gap-3 mt-3">
+        <div className="d-flex align-items-center gap-3 mt-3" style={themeStyle}>
             <button type="button" className="btn btn-sm btn-outline-primary" onClick={()=>setQuantity("decrement")}>-</button>
           <span className="fw-bold">{orderDetails.quantity}</span>
           <button type="button" className="btn btn-sm btn-outline-danger" onClick={()=>setQuantity("increment")}>+</button>
@@ -116,13 +121,14 @@ function Checkout() {
           Delivery address
         </legend>
 
-        <div className="mb-3">
+        <div className="mb-3" >
           <input
             type="text"
             className="form-control mb-2"
             placeholder="Enter home name"
             name="home"
             onChange={handleChange}
+            style={inputStyle}
           />
           <input
             type="text"
@@ -130,6 +136,7 @@ function Checkout() {
             placeholder="Enter place"
             name="place"
             onChange={handleChange}
+            style={inputStyle}
           />
           <input
             type="text"
@@ -137,6 +144,7 @@ function Checkout() {
             placeholder="Enter pin"
             name="pin"
             onChange={handleChange}
+            style={inputStyle}
           />
           <input
             type="contact"
@@ -144,11 +152,12 @@ function Checkout() {
             placeholder="Enter contact nuber"
             name="contact"
             onChange={handleChange}
+            style={inputStyle}
           />
         </div>
 
         {!hide && (
-          <div className="alert warning text-center " role="alert">
+          <div className="alert warning text-center " role="alert" style={themeStyle}>
             Palced Your order ,Check orders for details
           </div>
         )}

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../components/ThemeContext1';
 
 function Orders() {
   const user = localStorage.getItem("userName");
   const [items, setItems] = useState([]);
+  const {themeStyle}=useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +20,8 @@ function Orders() {
       }
     };
 
+    
+
     if (user) {
       fetchData();
     }
@@ -25,8 +29,8 @@ function Orders() {
 
   if (!user) {
     return (
-      <div className="container mt-4 text-center">
-        <div className="alert alert-info">Please <Link to="/login">login</Link> to view your orders.</div>
+      <div className="container mt-4 text-center" style={themeStyle}>
+        <div className="alert alert-info" style={themeStyle}>Please <Link to="/login">login</Link> to view your orders.</div>
       </div>
     );
   }

@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { ThemeContext } from "../components/ThemeContext1";
 
 function ProductDetails() {
+  const {themeStyle}=useContext(ThemeContext);
   const [product, setproduct] = useState({});
   const [hide, setHide] = useState(true);
   
@@ -37,7 +39,7 @@ function ProductDetails() {
           setHide(false);
           setTimeout(() => {
             setHide(true);
-            navigate("/cart");
+            navigate("/collection");
           }, 1000);
         } else alert("already on cart");
       } catch (e) {
@@ -48,8 +50,8 @@ function ProductDetails() {
 
 
   return (
-    <div className="container mt-5">
-      <div className="card mb-4 shadow-sm p-4">
+    <div className="container mt-5" style={themeStyle}>
+      <div className="card mb-4 shadow-sm p-4" style={themeStyle}>
         <div className="row g-4 align-items-center">
           <div className="col-md-6 text-center">
             <img
@@ -74,6 +76,7 @@ function ProductDetails() {
 
                 <div
                   className={`text-success fw-medium ${hide ? "d-none" : ""}`}
+                  style={themeStyle}
                 >
                   Added to the cart
                 </div>

@@ -23,6 +23,11 @@ import NewProduct from "../Admin/NewProduct";
 import EditItem from "../Admin/EditItem";
 import AdminManage from "../Admin/AdminManage";
 import Dashboard from "../Admin/Dashboard";
+import UserHome from "../pages/UserHome";
+import Men from "./Men"
+import Women from "./Women"
+import Unisex from "./Unisex"
+import AllItems from "./AllItems"
 
 function AppRoutes({ user, setUser, itemId, setItemId }) {
 
@@ -37,7 +42,7 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
     <ItemidContext.Provider value={{ itemId, setItemId, user }}>
       {!hideNavBar && <Navbar />}
       <Routes>
-        <Route path="/admin" element={<Home />}>
+        <Route path="/admin" element={<UserHome />}>
             <Route index element={<Dashboard/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<Products />} />
@@ -46,9 +51,15 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
           <Route path="/admin/products/newproduct" element={<NewProduct/>}/>
           <Route path="/admin/products/editproduct" element={<EditItem/>}/>
         </Route>
+        
 
-        <Route path="/" element={<Collection />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/" element={<UserHome/>} />
+        <Route path="/collection" element={<Collection />}>
+            <Route path="allitems" element={<AllItems/>}/>
+            <Route path="men" element={<Men/>}/>
+            <Route path="women" element={<Women/>}/>
+            <Route path="unisex" element={<Unisex/>}/>
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login/signup" element={<Signup />} />

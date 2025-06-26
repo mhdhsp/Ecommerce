@@ -1,12 +1,13 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from '../components/CartItem';
+import { ThemeContext } from '../components/ThemeContext1';
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
   const user = localStorage.getItem("userName");
-
+  const {themeStyle}=useContext(ThemeContext);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,9 +28,8 @@ function Cart() {
       fetchData();
     }
   }, [user]);
-
   return (
-    <div className="container mt-5">
+    <div className="container-fluid mt-5 " style={themeStyle}>
       {user ? (
         <>
           <h2 className="mb-4 text-center">🛒 Your Shopping Cart</h2>
@@ -49,7 +49,7 @@ function Cart() {
           )}
         </>
       ) : (
-        <div className="alert alert-info text-center">
+        <div className="alert alert-info text-center" style={themeStyle}>
           Please <Link to="/login">login</Link> to view your cart.
         </div>
       )}

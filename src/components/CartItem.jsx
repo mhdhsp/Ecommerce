@@ -2,13 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ItemidContext from "./Context";
+import { ThemeContext } from "./ThemeContext1";
 
 
 function CartItem({ item }) {
   const { user } = useContext(ItemidContext);
   const [cart, setCart] = useState([]);
   const navigate=useNavigate();
-
+  const {themeStyle}=useContext(ThemeContext);
 
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function CartItem({ item }) {
   }
 
   return (
-    <div className="card h-100 shadow-sm border-0">
+    <div className="card h-100 shadow-sm border-0" style={themeStyle}>
       <img
         src={item.image}
         alt={item.name}
