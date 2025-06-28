@@ -42,7 +42,7 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
     <ItemidContext.Provider value={{ itemId, setItemId, user }}>
       {!hideNavBar && <Navbar />}
       <Routes>
-        <Route path="/admin" element={<UserHome />}>
+        <Route path="/admin" element={<Home/>}>
             <Route index element={<Dashboard/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<Products />} />
@@ -55,6 +55,7 @@ function AppRoutes({ user, setUser, itemId, setItemId }) {
 
         <Route path="/" element={<UserHome/>} />
         <Route path="/collection" element={<Collection />}>
+            <Route index element={<AllItems/>}/>
             <Route path="allitems" element={<AllItems/>}/>
             <Route path="men" element={<Men/>}/>
             <Route path="women" element={<Women/>}/>

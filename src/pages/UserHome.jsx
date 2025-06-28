@@ -1,4 +1,3 @@
-// LandingPage.js
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,7 +20,6 @@ function LandingPage() {
 
   return (
     <div className={theme==="dark"?"bg-secondary":"bg-light"}>
-      {/* Hero Section */}
       <section className={` text-center py-5 `}  style={themeStyle}>
         <div className="container">
           <h1 className="display-4 fw-bold">Shop the Latest Trends</h1>
@@ -34,7 +32,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section id="products" className="py-5 " style={themeStyle}>
         <div className="container">
           <h2 className="text-center mb-4">Featured Products</h2>
@@ -83,15 +80,14 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Categories */}
       <section className="py-5 " style={themeStyle}>
         <div className="container">
           <h2 className="text-center mb-4">Shop by Category</h2>
           <div className="row text-center">
             {["Men", "Women", "Unisex","Sports"].map((category) => (
-              <div className="col-6 col-md-3 mb-3" key={category}>
+              <div className="col-6 col-md-3 mb-3" key={category} onClick={()=>navigate(`/collection/${category}`)}>
                 <div className="p-4  border rounded shadow-sm h-100" style={themeStyle}>
-                  <h5>{category}</h5>
+                  <h5 >{category}</h5>
                 </div>
               </div>
             ))}
@@ -99,7 +95,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section className="py-5 " style={themeStyle}>
         <div className="container text-center">
           <h2 className="mb-4">What Our Customers Say</h2>
@@ -114,7 +109,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section
   className="py-5 text-white text-center"
   style={{
@@ -131,7 +125,6 @@ function LandingPage() {
 </section>
 
 
-      {/* Footer */}
       <footer className="bg-dark text-white text-center py-3">
         <div className="container">
           <small>

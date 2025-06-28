@@ -1,12 +1,17 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import "../../components/Card.css"
 import { FaEdit, FaTrash, FaBan } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 
 function ItemCard({ item }) {
   const navigate=useNavigate();
+  const [showModal,setShowModal]=useState(false);
+
+
   const deleteItem = async () => {
+    setShowModal(false);
     try {
       await axios.delete(`http://localhost:3031/items/${item.id}`);
     } catch {
@@ -54,9 +59,11 @@ function ItemCard({ item }) {
             <button className="btn btn-primary me-2" onClick={editItem}>
               <FaEdit className="me-1" />
             </button>
-            <button className="btn btn-primary me-2" onClick={deleteItem}>
+           
+            <button className="btn btn-primary me-2" onClick={()=>setShowModal(true)}>
               <FaTrash className="me-1" />
             </button>
+             <Modal show={showModal} onConfirm={deleteItem} onCancel={()=>setShowModal(false)} message={"Are you sure to delete this item"}/>
             <button className="btn btn-primary" onClick={suspendItems}>
               <FaBan className="me-1" />
             </button>

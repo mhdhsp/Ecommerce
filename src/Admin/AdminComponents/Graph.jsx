@@ -15,7 +15,7 @@ function Graph({ users, products, avilableProducts, orders,revenue }) {
   const graphData = [
     { name: 'Users', value: users, fill: '#28a745' },          
     { name: 'Products', value: products, fill: '#dc3545' },    
-    { name: 'Available', value: avilableProducts, fill: '#007bff' }, 
+    { name: 'Available products', value: avilableProducts, fill: '#007bff' }, 
     { name: 'Orders', value: orders, fill: '#ffc107' }, 
     { name: 'revenue in thousands', value: revenue/1000, fill: '#ffc107' }        
   ];

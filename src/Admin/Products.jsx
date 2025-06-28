@@ -24,16 +24,7 @@ function Products() {
       navigate("newproduct");
   }
 
-  const removeAll=async()=>{
-     setShowModal(true);
-  }
-
-  const handleConfirm= async()=>{
-    setShowModal(false);
-     let res=await axios.get(`http://localhost:3031/items`);
-      res=res.data;
-      res.map(item=>axios.delete(`http://localhost:3031/items/${item.id}`));
-  }
+ 
 
   return (
     <div className="container mt-4">
@@ -41,11 +32,7 @@ function Products() {
         <h2>Products</h2>
         <div>
           <button className="btn btn-primary me-2" onClick={addNewProduct}>Add New Product</button>
-          <button className="btn btn-primary" onClick={removeAll}>Remove all products</button>
-          <Modal show={showModal}
-                  onConfirm={handleConfirm}
-                  onCancel={()=>setShowModal(false)}
-                  message="Are you sure to remove all products ?"/>
+          
         </div>
       </div>
 

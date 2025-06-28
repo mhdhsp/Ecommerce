@@ -1,26 +1,9 @@
 {
   "items": [
     {
-      "id": "1",
-      "name": "Classic ",
-      "price": "3200",
-      "gender": "Men",
-      "color": "White",
-      "image": "https://i.pinimg.com/736x/45/a1/72/45a17205a17aa5ca79a17ff9b9b3230a.jpg",
-      "description": "A timeless white tee made from premium cotton, perfect for everyday comfort and style.",
-      "sizes": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "stock": 30,
-      "suspend": false
-    },
-    {
       "id": "2",
-      "name": "Vintage Black Tee",
-      "price": 599,
+      "name": "Vintage Black ",
+      "price": "1000",
       "gender": "Men",
       "color": "Black",
       "image": "https://i.pinimg.com/736x/81/c4/68/81c468f3730c63f9bc104cf3dcea6968.jpg",
@@ -347,6 +330,20 @@
       ],
       "stock": 18,
       "suspend": false
+    },
+    {
+      "id": "8061",
+      "name": "suhail",
+      "price": "233",
+      "gender": "Men",
+      "color": "Army green",
+      "image": "https://i.pinimg.com/736x/45/a1/72/45a17205a17aa5ca79a17ff9b9b3230a.jpg",
+      "description": "A timeless white tee made from premium cotton, perfect for everyday comfort and style.",
+      "sizes": [
+        "M",
+        "L"
+      ],
+      "stock": "233"
     }
   ],
   "users": [
@@ -360,10 +357,7 @@
       "cart": [
         "5",
         "13",
-        "3",
-        "1",
-        "4",
-        "2"
+        "4"
       ],
       "orders": [
         {
@@ -404,18 +398,34 @@
           "orderTime": "2025-06-25T08:17:15.933Z",
           "orderId": 3708,
           "price": 569
+        },
+        {
+          "paymentMethod": "Cash on delivery",
+          "size": "XS",
+          "home": "palakkal",
+          "place": "kuppooth",
+          "pin": "67899",
+          "contact": "9847689449",
+          "quantity": 4,
+          "pName": "Peach Slim Tee",
+          "orderTime": "2025-06-26T13:53:36.878Z",
+          "orderId": 7549,
+          "price": 1956
+        },
+        {
+          "paymentMethod": "Cash on delivery",
+          "size": "M",
+          "home": "palakkal",
+          "place": "kuppooth",
+          "pin": "67899",
+          "contact": "9847689449",
+          "quantity": 3,
+          "pName": "Pastel Pink Tee",
+          "orderTime": "2025-06-27T06:32:59.331Z",
+          "orderId": 2264,
+          "price": 1647
         }
       ]
-    },
-    {
-      "id": "9f97",
-      "name": "jasil",
-      "email": "dakirhpt@gmail.com",
-      "password": "123",
-      "password2": "123",
-      "block": false,
-      "cart": [],
-      "orders": []
     }
   ],
   "admins": [

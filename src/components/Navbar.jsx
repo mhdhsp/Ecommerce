@@ -26,8 +26,8 @@ function Navbar() {
   return (
     <nav
       className={`navbar navbar-expand-lg shadow-sm ${
-        theme === "dark" ? "bg-secondary text-white" : "bg-white"
-      }`}
+        theme === "dark" ? "bg-secondary text-white" : "bg-white "
+      }`} style={{transition: "1s ease-in"}}
     >
       <div className="container-fluid">
         <Link className="navbar-brand text-primary fw-bold" to="/">
